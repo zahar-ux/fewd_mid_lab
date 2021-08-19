@@ -20,36 +20,26 @@ body {
 .rover-header-container {
   display: flex;
   justify-content: space-between;
-  padding: 10px;
-  border: 1px solid;
-}
-
-.rover-header-left a {
-  text-decoration: none;
-  color: black;
-  font-size: 20px;
-  margin: 15px;
-}
-
-/* .rover-header-left {
-  margin-bottom: 20px;
   align-items: center;
-} */
-
-.rover-header-right a {
-  text-decoration: none;
-  color: black;
-  font-size: 20px;
-  margin: 15px;
+  padding: 10px;
+  border-color: #cfd7de;
+  border-style: solid;
 }
-
-.rover-header-lef {
-  padding-top: 20px;
-  margin-right: 50px;
+.rover-header-image {
+  margin-right: 30px;
 }
-
+.rover-header-left {
+  display: flex;
+}
 .rover-header-right {
-  margin-left: 50px;
+  display: flex;
+}
+.rover-header-link {
+  font-size: 20px;
+  text-decoration: none;
+  color: #1b1f23;
+  margin-right: 30px;
+  margin-top: 15px;
 }
 
 .rover-header-right-mobile {
@@ -71,7 +61,7 @@ p {
 
 .rover-button-rover-cta {
   color: white;
-  background-color: rgb(9, 102, 56);
+  background-color: #14a96d;
   width: 200px;
   text-align: center;
   padding: 10px;
@@ -91,32 +81,20 @@ p {
   padding-top: 20px;
 }
 
-/* .rover-facts-container,
-.rover-cta-box {
-  float: left;
-  width: 50%;
-}
-
-.rover-fact-indiv {
-  display: flex;
-}
-
-.rover-fact-indiv p {
-  margin: top 20px;
-} */
-
 .rover-two-boxes-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   margin-top: 3%;
 }
 .rover-fact-indiv {
-  display: grid;
-  grid-template-columns: 10% 70%;
-  gap: 13px;
+  display: flex;
+  height: 60px;
+  position: relative;
+  left: 25px;
+  margin: 10px;
 }
-.rover-fact-indiv img {
-  width: 90%;
+.content h3 {
+  margin: 0;
 }
 
 .rover-cta-container {
@@ -131,6 +109,7 @@ p {
 
 .rover-cta-header {
   display: flex;
+
   margin: auto;
 }
 
@@ -140,38 +119,49 @@ p {
 
 .rover-cta {
   color: white;
-  background-color: rgb(9, 102, 56);
+  background-color: #14a96d;
   width: 100%;
   padding: 10px;
   text-align: center;
 }
 
 .rover-action-quote-container {
-  margin-top: 50px;
   background-image: url("/img/lady-with-her-dogs.jpg");
   height: 500px;
-  width: 100%;
+  width: 100;
   background-size: cover;
-  position: relative;
 }
 
-.rover-quote {
-  position: absolute;
+aside .rover-quote {
   background-color: white;
-  right: 0;
-  left: 0;
-  flex-direction: column;
+  font-size: 40px;
   font-weight: bold;
-  font-size: 20px;
-  padding-left: 20px;
-  align-items: center;
+  width: 100;
+  height: 250px;
+  line-height: 1.5;
+}
+
+.rover-quote span {
+  color: gray;
 }
 
 .rover-123-item-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  text-align: center;
   border: 1px solid;
   padding: 20px;
+  text-decoration: none;
+  margin-top: 100px;
+}
+
+.rover-123-container-title h2 {
+  justify-content: center;
+}
+
+.rover-123-item-container h2,
+h3 {
+  text-decoration: none;
 }
 
 @media only screen and (max-width: 480px) {
@@ -193,6 +183,16 @@ p {
     height: fit-content;
   }
 
+  .rover-action-shot {
+    height: 300px;
+    margin: 0 auto 20px;
+  }
+  .rover-action-quote-container {
+    width: 100%;
+    position: relative;
+    left: 0;
+  }
+
   /* .rover-facts-container,
   .rover-cta-box {
     float: unset;
@@ -212,9 +212,26 @@ p {
   .rover-action-quote-container {
     margin-top: 50px;
     background-image: url("/img/lady-with-her-dogs.jpg");
-    height: 300px;
-    width: 100%;
+    height: 200px;
+    width: 500px;
     background-size: cover;
+  }
+
+  aside .rover-quote {
+    background-color: white;
+    font-size: 10px;
+    font-weight: bold;
+    width: 200px;
+    height: 110px;
+    line-height: 1.5;
+  }
+
+  .rover-quote {
+    background-color: white;
+  }
+
+  .rover-quote span {
+    color: gray;
   }
 
   .rover-123-item-container {
